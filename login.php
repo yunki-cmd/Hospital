@@ -30,11 +30,11 @@
                     <path
                         d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
                 </svg>
-                <form action="usuario.php" class="form" method="POST" id="form">
+                <form action="./src/usuario.php" class="form" method="POST" id="form">
                     <label for="user">Nombre</label>
                     <input type="user" name="user" id="user">
                     <label for="password">Contraseña</label>
-                    <input type="password" name='password' id="password">
+                    <input type="password" name='password' id="password" autocomplete="TRUE">
                     <input type="submit" id="submit" value="Enviar">
                 </form>
             </div>
@@ -42,11 +42,13 @@
         <?php
 if (isset($_GET['error'])) {
     $error = $_GET['error'];
+    $conexion = $_GET['conexion'];
     if ($error) {
         echo '<div class="error">
                     <span>Usuario o password Incorrectos</span>
-                    <span>Introduzca de nuevo los Campos</span>
-                </div>';
+                    <span>Introduzca de nuevo los Campos</span>';
+                    echo $conexion,
+                '</div>';
     }
 }
 ?>

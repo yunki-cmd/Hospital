@@ -2,7 +2,7 @@ let current = null;
 const formulario = document.getElementById("form");
 const user = document.getElementById("user");
 const password = document.getElementById("password");
-const submit1 = document.getElementById("enviar");
+const submit1 = document.getElementById("submit");
 user.addEventListener("focus", () => {
   if (current) current.pause();
   current = anime({
