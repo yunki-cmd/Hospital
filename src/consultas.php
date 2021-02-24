@@ -1,11 +1,11 @@
 <?php
 
-$datosRecibidos = file_get_contents('php://input');
-
-header('Content-Type: application/json charset=UTF-8');
+/* $datosRecibidos = file_get_contents('php://input'); */
+/* header('Content-Type: application/json charset=UTF-8'); */
 $select_pacientes = 'select * from paciente';
 $conexion = new mysqli('localhost', 'hospital', 'hospital', 'hospital');
-$datosRecibidos = str_replace('"', '', $datosRecibidos);
+var_dump($_POST);
+/* $datosRecibidos = str_replace('"', '', $datosRecibidos);
 switch ($datosRecibidos) {
     case 'todos':
         $select = $select_pacientes;
@@ -25,9 +25,9 @@ switch ($datosRecibidos) {
     default:
         $select = 'show tables';
         break;
-}
+} */
 
-if($conexion->connect_error){
+/* if($conexion->connect_error){
     die. 'error conexion'. $conexion->connect_error;
 }else{
     if($query_result = $conexion->query($select)){
@@ -39,7 +39,7 @@ if($conexion->connect_error){
         $query_result->close();
         $conexion->close();
     }
-}
+} */
 
 
 
