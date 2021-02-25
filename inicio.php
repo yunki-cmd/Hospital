@@ -26,13 +26,15 @@ if (isset($_GET['user']) && isset($_GET['password'])) {
     <article class="container">
         <header class="constainer__header">
             <nav class="container__nav">
-                <ul class="container__header_ul">
+                <ul class="container__header_ul" id='consulta'>
                         <ul id="insertar" class="container__header_ul--insertar">Insertar
-                            <li>Doctor</li>
-                            <li>Paciente</li>
+                            <li value="Doctor">Doctor</li>
+                            <li value="Paciente">Paciente</li>
                         </ul>
                         <ul id="citas" class="container__header_ul--citas">Modificar Citas
-                            <li>consultar cita</li>
+                            <li value="consultarCitaDoctor">consultar cita doctor</li>
+                            <li value="consultarCitaPaciente">consultar cita paciente</li>
+                            <li value="consultarCitaFecha">consultar cita fecha</li>
                             <li>insertar cita</li>
                             <li>modificiar cita</li>
                         </ul>
